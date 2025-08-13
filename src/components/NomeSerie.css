@@ -1,0 +1,103 @@
+.nome-serie{
+    
+        font-weight: bold; 
+        margin-top: 200px;
+
+}
+.icones{
+    display: flex;
+    align-items: center;
+}
+
+.icone{
+
+    width: 5vh;
+    height: 5vw;
+    color: red;
+
+
+}
+.icon{
+    
+    color: white;
+    font-weight: 700; 
+   
+    
+}
+.titulo{
+    font-family: 'Bebas Neue', sans-serif;
+    color: yellow;
+    font-weight: bold; 
+}
+.subtitulo{
+    color: yellow;
+    font-weight: 400; 
+    font-size: 24px;
+    display: block;
+    margin-top: -10px;
+}
+.SubBotoes {
+    position: absolute;
+    top: 350px; /* Aumente o valor para descer mais */
+    right: 20px;  
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.idade {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    
+  }
+  .barra{
+    color: white;
+    font-size: 24px;
+  }
+  
+  .volume {
+    color: white;
+    font-size: 24px; /* Aumenta o tamanho do ícone */
+  }
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.botao-assistir {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botao-info {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.botao-info:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

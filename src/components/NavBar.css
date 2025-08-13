@@ -1,0 +1,48 @@
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    align-items: center;
+}
+
+.logotipo{
+    width: 100px;
+}
+
+
+.link{
+    color: #dcdcdc;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+}
+
+.selecionado{
+    color: #eeeeee;
+    font-weight: 800;
+}
+
+.link:hover{
+    color: #999999;
+}
+.conta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 20px;  /* Mantém no topo */
+    right: 30px; /* Alinha no canto direito */
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.conta svg {
+    font-size: 24px;
+}

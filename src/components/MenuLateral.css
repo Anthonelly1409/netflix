@@ -1,0 +1,36 @@
+.menu-lateral{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 200px;
+
+    padding: 4px;
+    background-color: #efefef;
+}
+
+.item-menu{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    padding: 8px;
+    text-decoration: none;
+
+    border-radius: 4px;
+    color: #2f2f2f;
+}
+
+.item-menu:hover{
+    background-color: #dcdcdc;
+}
+
+.icone{
+    width: 24px;
+    height: 24px;
+}
+
+.texto-menu{
+    font-size: 14px;
+    font-weight: 500;
+}
