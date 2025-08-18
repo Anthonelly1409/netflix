@@ -1,35 +1,38 @@
-import  './CarrosselSeries.css' 
-import Wolf from '../img/Wolf.jpg'
-import Riverdale from '../img/Riverdale.jpg'
-import Sintonia from '../img/Sintonia.jpg'
-import You from '../img/You.jpg'
-import TheWitcher from '../img/TheWitcher.jpg'
-import Dorama from '../img/Dorama.jpg'
-// import Gambito from '../img/gambito.jpg'
+import './CarrosselSeries.css';
+import { Link } from 'react-router-dom'; // importa Link para navegar
 
+import Wolf from '../img/Wolf.jpg';
+import Riverdale from '../img/Riverdale.jpg';
+import Sintonia from '../img/Sintonia.jpg';
+import You from '../img/You.jpg';
+import TheWitcher from '../img/TheWitcher.jpg';
+import Dorama from '../img/Dorama.jpg';
 
-function CarrosselSeries(){
+function CarrosselSeries() {
+  const series = [
+    { id: 1, titulo: "Wolf", capa: Wolf },
+    { id: 2, titulo: "Riverdale", capa: Riverdale },
+    { id: 3, titulo: "Sintonia", capa: Sintonia },
+    { id: 4, titulo: "You", capa: You },
+    { id: 5, titulo: "The Witcher", capa: TheWitcher },
+    { id: 6, titulo: "Dorama", capa: Dorama },
+  ];
 
-    return(
+  return (
     <div className='containers'>
-        
-        <span className='series'>
-            Comédia
-        </span>
+      <span className='series'>
+        Comédia
+      </span>
 
-        <div className='fotos2'>
-            <img className='capas2' src={Wolf}/>
-            <img className='capas2' src={Riverdale}/>
-            <img className='capas2' src={Sintonia}/>
-            <img className='capas2' src={You}/>
-            <img className='capas2' src={TheWitcher}/>
-            <img className='capas2' src={Dorama}/>
-            {/* <img className='capas1' src={Gambito}/> */}
-
-        </div>
-        
+      <div className='fotos2'>
+        {series.map(serie => (
+          <Link key={serie.id} to={`/detalhes/${serie.id}`}>
+            <img className='capas2' src={serie.capa} alt={serie.titulo} />
+          </Link>
+        ))}
+      </div>
     </div>
-    );
+  );
 }
 
 export default CarrosselSeries;
