@@ -1,16 +1,50 @@
+/* Import das fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+/* Estilos globais */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Anton', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   background-color: black;
-
+  color: white; /* opcional, para o texto ficar visível no fundo preto */
 }
 
+/* Estilos para códigos */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Exemplo de uso da Bebas Neue em títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+/* Import das fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: 'Anton', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white; /* opcional, para o texto ficar visível no fundo preto */
+}
+
+/* Estilos para códigos */
+code {
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Exemplo de uso da Bebas Neue em títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
 }
