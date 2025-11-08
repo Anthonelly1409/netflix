@@ -1,0 +1,21 @@
+.catalogo {
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.lista-series {
+  display: flex;
+  gap: 20px;
+}
+
+.card img {
+  width: 220px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}

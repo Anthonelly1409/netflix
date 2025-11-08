@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Fundo estilo Netflix */
+.perfil-container {
+  padding: 40px;
+  color: white;
+  background-color: #141414;
+  min-height: 100vh;
+  font-family: 'Bebas Neue', sans-serif;
+  animation: fadeIn 1.2s ease-in;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cabeçalho do perfil */
+.perfil-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* Área do avatar e nome */
+/* Área do avatar e nome */
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* antes era 20px — mais próximo agora */
+  position: relative;
+}
+
+/* Avatar */
+.perfil-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.perfil-avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Nome do usuário */
+.perfil-nome {
+  font-size: 38px; /* ligeiramente menor para equilibrar */
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0; /* remove espaçamento vertical extra */
+}
+
+/* Bio e progresso */
+.perfil-detalhes {
+  margin-top: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: #b3b3b3;
+}
+
+
+@keyframes fadeInBio {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de progresso */
+.perfil-progresso {
+  margin-top: 10px;
+  width: 250px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.perfil-progresso-barra {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #e50914, #b1060f);
+  animation: loadProgress 2s ease-out forwards;
+}
+
+@keyframes loadProgress {
+  from { width: 0%; }
+  to { width: 75%; }
+}
+
+/* Playlist */
+.playlist h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Card da série */
+.playlist-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.playlist-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.playlist-card span {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #dcdcdc;
+  font-family: 'Lato', sans-serif;
+}
+
+.playlist-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+.playlist-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Ícone de configurações */
+/* Ícone de configurações */
+.icone-config {
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.4s ease, color 0.4s ease;
+  
+  /* Novo posicionamento */
+  position: absolute;
+  top: 25px;       /* sobe a engrenagem */
+  right: 40px;     /* afasta da borda */
+  z-index: 10;
+}
+
+/* Efeito hover e rotação */
+.icone-config:hover {
+  color: #e50914;
+  transform: scale(1.1);
+  animation: spin 1.2s linear infinite;
+}
+
+/* Animação da rotação */
+@keyframes spin {
+  from { transform: rotate(0deg) scale(1.1); }
+  to { transform: rotate(360deg) scale(1.1); }
+}
+
+/* Tooltip */
+.icone-config::after {
+  content: "Editar perfil";
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.icone-config::before {
+  content: "";
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.icone-config:hover::after,
+.icone-config:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}

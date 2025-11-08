@@ -1,50 +1,69 @@
-/* Import das fontes do Google */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+/* Importando todas as fontes usadas no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* Estilos globais */
+/* ---------- ESTILOS GLOBAIS ---------- */
 body {
   margin: 0;
-  font-family: 'Anton', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Anton', 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
-  color: white; /* opcional, para o texto ficar visível no fundo preto */
+  color: white;
 }
 
-/* Estilos para códigos */
+/* Estilos para códigos (caso tenha) */
 code {
-  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Exemplo de uso da Bebas Neue em títulos */
+/* Títulos (como USUÁRIO NETFLIX, Perfis etc.) */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bebas Neue', sans-serif;
-}
-/* Import das fontes do Google */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
-
-/* Estilos globais */
-body {
-  margin: 0;
-  font-family: 'Anton', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color: white; /* opcional, para o texto ficar visível no fundo preto */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-/* Estilos para códigos */
-code {
-  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Textos, botões e inputs */
+p, span, button, input, a {
+  font-family: 'Lato', sans-serif;
 }
 
-/* Exemplo de uso da Bebas Neue em títulos */
-h1, h2, h3, h4, h5, h6 {
+/* ---------- ESTILOS ESPECÍFICOS ---------- */
+
+/* Nome principal do perfil */
+.perfil-nome {
   font-family: 'Bebas Neue', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Cor diferente para "USUÁRIO" e "NETFLIX" */
+.perfil-nome .usuario {
+  color: #e50914; /* Vermelho Netflix */
+}
+
+.perfil-nome .netflix {
+  color: #ffffff; /* Branco */
+}
+
+/* Ícone de configurações */
+.icone-config {
+  position: fixed;
+  top: 22px;
+  right: 85px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+}
+
+.icone-config:hover {
+  transform: rotate(90deg);
+  color: #e50914;
 }

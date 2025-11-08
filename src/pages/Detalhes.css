@@ -108,3 +108,103 @@
   height: 40px;
   color: red;
 }
+
+/* ----------------- Comentários ----------------- */
+.comentarios-secao {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 10px;
+  max-width: 800px;
+  position: relative;
+  z-index: 2; /* garante que fica acima do gradiente */
+  font-family: 'Roboto', Arial, sans-serif; /* <-- Fonte só nos comentários */
+}
+
+.comentarios-secao h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.lista-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comentario-item {
+  display: flex;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.comentario-conteudo {
+  flex: 1;
+}
+
+.comentario-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.nome-usuario {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+.comentario-item p {
+  margin: 0;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.responder {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.responder:hover {
+  text-decoration: underline;
+}
+
+.form-comentario {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.form-comentario input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.enviar-comentario {
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.enviar-comentario:hover {
+  background: #b20710;
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Fundo estilo Netflix */
+.editar-container {
+  background-color: #141414;
+  color: #fff; /* texto branco */
+  min-height: 100vh;
+  padding: 50px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Título principal */
+.editar-container h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* Formulário */
+.editar-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Rótulos */
+.editar-form label {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Campos de entrada */
+.editar-form input,
+.editar-form select,
+.editar-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  outline: none;
+}
+
+.editar-form input:focus,
+.editar-form select:focus,
+.editar-form textarea:focus {
+  border: 1px solid #e50914;
+}
+
+/* Textarea */
+.editar-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Botões */
+.editar-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.btn-salvar {
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #f40612;
+}
+
+.btn-cancelar {
+  background-color: #555;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+  background-color: #777;
+}
